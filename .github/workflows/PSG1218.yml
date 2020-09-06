@@ -1,4 +1,4 @@
-name: Build OpenWrt newifi3
+name: Build OpenWrt PSG1218
 
 on:
   repository_dispatch:
@@ -8,7 +8,7 @@ on:
     branches:
       - dev-19.07
     paths:
-      - 'psg1218.config'
+      - 'PSG1218.config'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -18,7 +18,7 @@ env:
   REPO_URL: https://github.com/lienol/openwrt
   REPO_BRANCH: dev-19.07
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: psg1218.config
+  CONFIG_FILE: PSG1218.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
