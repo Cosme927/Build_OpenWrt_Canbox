@@ -55,6 +55,10 @@ jobs:
         df -hT $PWD
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        
+    - name: replace Makefile
+      run: cd openwrt/target/linux/ramips/image &&  [ -e Makefile ] && mv Makefile openwrt/target/linux/ramips/image/Makefile     
+        
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
