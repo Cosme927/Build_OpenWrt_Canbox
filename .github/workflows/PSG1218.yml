@@ -9,6 +9,7 @@ on:
       - dev-19.07
     paths:
       - 'PSG1218.config'
+      - 'Makefile'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -18,6 +19,7 @@ env:
   REPO_URL: https://github.com/lienol/openwrt
   REPO_BRANCH: dev-19.07
   FEEDS_CONF: feeds.conf.default
+  MAKE_FILE: Makefile
   CONFIG_FILE: PSG1218.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
@@ -55,7 +57,7 @@ jobs:
         df -hT $PWD
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        cp Makefile openwrt/target/linux/ramips/image
+        cp $Makefile openwrt/target/linux/ramips/image
         
     - name: Load custom feeds
       run: |
