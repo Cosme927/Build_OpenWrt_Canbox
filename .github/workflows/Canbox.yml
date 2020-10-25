@@ -8,7 +8,7 @@ on:
     branches:
       - 19.07
     paths:
-      - 'CANBOX.config'
+      - 'Canbox.config'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -18,7 +18,7 @@ env:
   REPO_URL: https://github.com/lienol/openwrt
   REPO_BRANCH: 19.07
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: CANBOX.config
+  CONFIG_FILE: Canbox.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
