@@ -1,4 +1,4 @@
-name: Build OpenWrt PSG1218
+name: Build OpenWrt CANBOX
 
 on:
   repository_dispatch:
@@ -6,9 +6,9 @@ on:
     types: published
   push:
     branches:
-      - dev-19.07
+      - 19.07
     paths:
-      - 'PSG1218.config'
+      - 'CANBOX.config'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -16,9 +16,9 @@ on:
 
 env:
   REPO_URL: https://github.com/lienol/openwrt
-  REPO_BRANCH: dev-19.07
+  REPO_BRANCH: 19.07
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: PSG1218.config
+  CONFIG_FILE: CANBOX.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
