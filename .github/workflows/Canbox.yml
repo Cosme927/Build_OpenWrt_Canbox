@@ -15,7 +15,7 @@ on:
     types: started
 
 env:
-  REPO_URL: https://github.com/lienol/openwrt
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: 19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Canbox.config
